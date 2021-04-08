@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="Main Menu.uss" />
+    <ui:VisualElement name="StartMenu" style="height: 398px;">
+        <ui:Label text="Login" name="login-label" />
+        <ui:TextField picking-mode="Ignore" label="Username" text="username..." name="username" />
+        <ui:TextField picking-mode="Ignore" label="Password" text="filler text" name="password" password="true" />
+        <ui:Button text="Submit" name="submit" />
+    </ui:VisualElement>
+</ui:UXML>
