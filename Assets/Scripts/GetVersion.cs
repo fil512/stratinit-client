@@ -16,20 +16,21 @@ public class GetVersion : MonoBehaviour
             Debug.Log("RESULT: " + result);
             Running = false;
         }));
+        Debug.Log("After coroutine");
     }
 
-   IEnumerator GetRequest(string url, Action<string> result)
+    IEnumerator GetRequest(string url, Action<string> result)
     {
         string authorization = authenticate("test1", "testy");
         UnityWebRequest www = UnityWebRequest.Get(url);
         www.SetRequestHeader("Authorization", authorization);
         yield return www.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError)
+        if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
         {
-         Debug.Log(www.error);
-         if (result != null)
-             result(www.error);
+            Debug.Log(www.error);
+            if (result != null)
+                result(www.error);
         }
         else
         {
@@ -38,12 +39,12 @@ public class GetVersion : MonoBehaviour
                 result(www.downloadHandler.text);
         }
     }
-   
-   string authenticate(string username, string password)
-   {
-       string auth = username + ":" + password;
-       auth = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(auth));
-       auth = "Basic " + auth;
-       return auth;
-   }
+
+    string authenticate(string username, string password)
+    {
+        string auth = username + ":" + password;
+        auth = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(auth));
+        auth = "Basic " + auth;
+        return auth;
+    }
 }
