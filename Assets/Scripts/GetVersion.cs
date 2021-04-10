@@ -35,8 +35,10 @@ public class GetVersion : MonoBehaviour
         else
         {
             Debug.Log(www.downloadHandler.data); // this log is returning the requested data. 
-            if (result != null)
+            if (result != null) {
                 result(www.downloadHandler.text);
+                GameEvents.current.Login();
+            }
         }
     }
 

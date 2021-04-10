@@ -522,7 +522,7 @@ RectTransform:
   - {fileID: 1856884467}
   - {fileID: 198602184}
   m_Father: {fileID: 1338500369}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -705,12 +705,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1338500369}
-  m_RootOrder: 0
+  m_Father: {fileID: 1883192035}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111.6, y: -9.9}
+  m_AnchoredPosition: {x: -111.6, y: 30.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564882740
@@ -1149,12 +1149,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1338500369}
-  m_RootOrder: 1
+  m_Father: {fileID: 1883192035}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.9, y: -51.8}
+  m_AnchoredPosition: {x: -106.9, y: -11.799999}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078572757
@@ -1284,8 +1284,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 564882739}
-  - {fileID: 1078572756}
   - {fileID: 334860320}
   m_Father: {fileID: 1883192035}
   m_RootOrder: 0
@@ -1896,6 +1894,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1883192035}
   - component: {fileID: 1883192036}
+  - component: {fileID: 1883192037}
+  - component: {fileID: 1883192038}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1917,6 +1917,8 @@ RectTransform:
   - {fileID: 1338500369}
   - {fileID: 974309905}
   - {fileID: 385112125}
+  - {fileID: 564882739}
+  - {fileID: 1078572756}
   m_Father: {fileID: 256283407}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1939,3 +1941,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginInputField: {fileID: 1338500370}
   passwordInputField: {fileID: 974309906}
+--- !u!114 &1883192037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883192034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9a73bf84d4550459d4ffac5eb881d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1883192038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883192034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f12b2d3deb137947879088770675ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
